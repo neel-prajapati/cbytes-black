@@ -104,7 +104,7 @@ export const Hero = () => {
         </motion.div>
 
         {/* Stats Badges */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -122,36 +122,32 @@ export const Hero = () => {
           >
             <p className="text-xs md:text-sm text-white font-semibold">🚀 10+ Years Experience</p>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center " style={{marginTop:'2rem'}}
         >
           <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             className="group px-8 md:px-10 py-4 md:py-5 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold text-sm md:text-base shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 flex items-center justify-center gap-2"
           >
-            Start Your Project
-            <motion.span
-              animate={{ x: [0, 4, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowRight className="w-4 h-4" />
-            </motion.span>
+            
+            <p style={{paddingLeft:'1rem',paddingRight:'1rem', paddingTop:'1px', paddingBottom:'2px'}}>Build. Scale. Convert.</p>
+
           </motion.button>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 md:px-10 py-4 md:py-5 rounded-lg border border-purple-500/50 text-white bg-gradient-to-r from-transparent to-transparent hover:from-purple-500/10 hover:to-blue-500/10 font-semibold text-sm md:text-base transition-all duration-300"
           >
             Explore Our Work
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
 

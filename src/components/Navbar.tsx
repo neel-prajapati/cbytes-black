@@ -33,7 +33,7 @@ export const Navbar = () => {
           className="text-2xl font-bold text-text-muted tracking-tight stylish-font"
           whileHover={{ opacity: 0.8 }}
         >
-          Cruising Bytes
+                    <p style={{marginLeft:'2rem', marginTop:'1rem'}}>Cruising Bytes</p>
         </motion.a>
 
         {/* Contacts Link */}
@@ -42,7 +42,7 @@ export const Navbar = () => {
           className="text-sm font-semibold text-text-muted hover:text-text-muted/70 transition-colors underline"
           whileHover={{ scale: 1.05 }}
         >
-          CONTACT
+          <p style={{marginRight:'2rem', marginTop:'1rem'}}>CONTACT</p>
         </motion.button>
       </div>
     </motion.nav>
