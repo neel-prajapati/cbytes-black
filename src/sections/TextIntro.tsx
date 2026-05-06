@@ -28,7 +28,18 @@ export const TextIntro = () => {
   return (
     <section className="relative w-full py-24 md:py-32 lg:py-40 bg-black overflow-hidden">
       {/* Gradient Background Elements */}
+      
+          {/* Decorative Elements Below Text */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: false }}
+            className="mt-12 md:mt-16 h-1 w-full mx-auto bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500"
+            style={{margin:'2rem'}}
+          />
       <div className="absolute inset-0 overflow-hidden">
+        
         <motion.div
           className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-transparent blur-3xl"
           animate={{
@@ -70,14 +81,6 @@ export const TextIntro = () => {
             ))}
           </p>
 
-          {/* Decorative Elements Below Text */}
-          <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            whileInView={{ scaleX: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: false }}
-            className="mt-12 md:mt-16 h-1 w-full mx-auto bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500"
-          />
         </motion.div>
       </div>
     </section>
