@@ -114,5 +114,9 @@ body {
   font-family: "UnifrakturCook", cursive;
   font-weight: 700;
   font-style: normal;
+}
 
+.use-inter-fonts {
+  font-family: "Inter", sans-serif;
+  color: #c5c5c5;
 }

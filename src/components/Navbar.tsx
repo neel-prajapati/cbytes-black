@@ -42,7 +42,7 @@ export const Navbar = () => {
           className="text-sm font-semibold text-text-muted hover:text-text-muted/70 transition-colors underline"
           whileHover={{ scale: 1.05 }}
         >
-          CONTACTS
+          CONTACT
         </motion.button>
       </div>
     </motion.nav>

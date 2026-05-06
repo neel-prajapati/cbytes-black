@@ -31,40 +31,40 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative w-full bg-black overflow-hidden pt-32 pb-24 md:pt-48 md:pb-32 lg:pt-64 lg:pb-40">
+    <section className="relative w-full h-screen bg-black overflow-hidden flex flex-col items-center justify-center">
       {/* Animated Background Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Purple Orb - Top Left */}
         <motion.div
-          className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-purple-600/30 to-purple-900/10 blur-3xl"
+          className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-purple-600/60 to-purple-900/30 blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, 30, 0],
             y: [0, 20, 0],
-            opacity: [0.3, 0.6, 0.3]
+            opacity: [0.5, 0.8, 0.5]
           }}
           transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
         />
 
         {/* Blue Orb - Bottom Right */}
         <motion.div
-          className="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-gradient-to-tl from-blue-600/20 to-cyan-500/10 blur-3xl"
+          className="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-gradient-to-tl from-blue-600/50 to-cyan-500/30 blur-3xl"
           animate={{
             scale: [1.2, 0.9, 1.2],
             x: [0, -40, 0],
             y: [0, -30, 0],
-            opacity: [0.2, 0.5, 0.2]
+            opacity: [0.4, 0.7, 0.4]
           }}
           transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         />
 
         {/* Pink Orb - Center */}
         <motion.div
-          className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-gradient-to-bl from-pink-500/15 to-purple-600/10 blur-3xl"
+          className="absolute top-1/3 right-1/4 w-72 h-72 rounded-full bg-gradient-to-bl from-pink-500/40 to-purple-600/30 blur-3xl"
           animate={{
             scale: [0.9, 1.2, 0.9],
             x: [0, 50, 0],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.3, 0.6, 0.3]
           }}
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         />
@@ -81,16 +81,16 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-10 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 lg:px-10 w-full flex flex-col items-center justify-center h-full">
         {/* Main Heading with Stagger */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, margin: '0px 0px -100px 0px' }}
-          className="mb-12 md:mb-16 lg:mb-20"
+          className="mb-12 md:mb-16 lg:mb-20 text-center w-full"
         >
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light leading-[1.1] md:leading-[1.1] lg:leading-[1.1] text-white bg-clip-text bg-gradient-to-r from-white via-white to-text-muted/80">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light leading-[1.1] md:leading-[1.1] lg:leading-[1.1] text-white bg-clip-text bg-gradient-to-r from-white via-white to-text-muted/80 use-inter-fonts">
             {words.map((word, index) => (
               <motion.span
                 key={index}
@@ -103,22 +103,12 @@ export const Hero = () => {
           </h1>
         </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-base md:text-lg text-text-muted/70 max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed"
-        >
-          We transform bold ideas into stunning digital products. Award-winning design, cutting-edge development, and strategic innovation for brands that dare to be different.
-        </motion.p>
-
         {/* Stats Badges */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-12 md:mb-16 justify-start"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-12 md:mb-16 justify-center"
         >
           <motion.div
             whileHover={{ scale: 1.05, y: -5 }}
@@ -139,7 +129,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-20 md:mb-24"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center"
         >
           <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
@@ -162,27 +152,6 @@ export const Hero = () => {
           >
             Explore Our Work
           </motion.button>
-        </motion.div>
-
-        {/* Trust Badges */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="pt-8 md:pt-12 border-t border-text-muted/10"
-        >
-          <p className="text-xs md:text-sm text-text-muted/50 mb-6 uppercase tracking-widest font-medium">Trusted by Industry Leaders</p>
-          <div className="flex flex-wrap gap-8 md:gap-12 items-center">
-            {['Fortune 500', 'Startups', 'Agencies', 'Enterprises'].map((item) => (
-              <motion.div
-                key={item}
-                whileHover={{ scale: 1.1 }}
-                className="text-text-muted/60 text-sm font-medium cursor-pointer hover:text-text-muted/80 transition-colors"
-              >
-                {item}
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </div>
 
