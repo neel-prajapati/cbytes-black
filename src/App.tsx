@@ -5,7 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
 import { TextIntro } from './sections/TextIntro';
 import { PeepsCrowd } from './sections/PeepsCrowd';
-import { Showreel } from './sections/Showreel';
+// import { Showreel } from './sections/Showreel';
 import { Work } from './sections/Work';
 import { Services } from './sections/Services';
 import { About } from './sections/About';

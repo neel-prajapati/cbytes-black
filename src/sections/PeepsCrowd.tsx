@@ -69,7 +69,7 @@ interface NormalWalkInput {
 }
 
 const normalWalk = ({ peep, props }: NormalWalkInput) => {
-  const { startX, startY, endX } = props;
+  const { startY, endX } = props;
 
   const xDuration = 10;
   const yDuration = 0.25;
@@ -95,15 +95,15 @@ const walks = [normalWalk];
 
 class Peep {
   image: HTMLImageElement;
-  rect: number[];
-  width: number;
-  height: number;
-  drawArgs: any[];
-  x: number;
-  y: number;
-  anchorY: number;
-  scaleX: number;
-  walk: gsap.core.Timeline | null;
+  rect: number[] = [];
+  width: number = 0;
+  height: number = 0;
+  drawArgs: any[] = [];
+  x: number = 0;
+  y: number = 0;
+  anchorY: number = 0;
+  scaleX: number = 1;
+  walk: gsap.core.Timeline | null = null;
 
   constructor({ image, rect }: PeepProps) {
     this.image = image;
@@ -134,7 +134,17 @@ class Peep {
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.scale(this.scaleX, 1);
-    ctx.drawImage(...this.drawArgs);
+    ctx.drawImage(
+      this.drawArgs[0] as CanvasImageSource,
+      this.drawArgs[1],
+      this.drawArgs[2],
+      this.drawArgs[3],
+      this.drawArgs[4],
+      this.drawArgs[5],
+      this.drawArgs[6],
+      this.drawArgs[7],
+      this.drawArgs[8]
+    );
     ctx.restore();
   }
 }
@@ -278,7 +288,8 @@ export const PeepsCrowd = () => {
       <canvas
         ref={canvasRef}
         id="canvas"
-        className="w-full block h-80 sm:h-96 md:h-[450px] lg:h-[500px]"
+        className="w-full block"
+        style={{ height: '500px' }}
       />
     </section>
   );

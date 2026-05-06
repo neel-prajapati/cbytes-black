@@ -16,14 +16,6 @@ export const TextIntro = () => {
     },
   };
 
-  const wordVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' }
-    },
-  };
 
   return (
     <section className="relative w-full py-24 md:py-32 lg:py-40 bg-black overflow-hidden">
@@ -73,7 +65,7 @@ export const TextIntro = () => {
             {words.map((word, index) => (
               <motion.span
                 key={index}
-                variants={wordVariants}
+                // variants={wordVariants}
                 className="inline-block mr-2"
               >
                 {word}&nbsp;
