@@ -58,7 +58,7 @@ export const CTA = () => {
             className="flex flex-col md:flex-row gap-4 justify-center items-center"
           >
             <motion.a
-              href="mailto:hi@cruisingbytes.black"
+              href="mailto:hi@cruisingbytes.com"
               whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               className="relative px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-lg font-bold text-lg transition-all duration-300 overflow-hidden group"
@@ -90,11 +90,11 @@ export const CTA = () => {
               <p className="text-text-muted/70">Get in touch with us directly</p>
               <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                 <motion.a
-                  href="mailto:hi@cruisingbytes.black"
+                  href="mailto:hi@cruisingbytes.com"
                   whileHover={{ color: '#a855f7' }}
                   className="text-text-muted text-lg font-semibold transition-colors"
                 >
-                  hi@cruisingbytes.black
+                  hi@cruisingbytes.com
                 </motion.a>
                 <motion.a
                   href="tel:+1234567890"

@@ -30,7 +30,7 @@ export const CTA = () => {
 
           <div className="space-y-4">
             <motion.a
-              href="mailto:hi@cruisingbytes.black"
+              href="mailto:hi@cruisingbytes.com"
               whileHover={{ scale: 1.05 }}
               className="inline-block px-10 py-4 rounded-lg bg-white text-black font-semibold hover:bg-white/90 transition-all"
             >
@@ -38,7 +38,7 @@ export const CTA = () => {
             </motion.a>
 
             <p className="text-text-muted/60 text-sm mt-8">
-              hi@cruisingbytes.black
+              hi@cruisingbytes.com
             </p>
           </div>
         </motion.div>

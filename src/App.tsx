@@ -27,9 +27,9 @@ function App() {
           <Hero />
           <TextIntro />
           <PeepsCrowd />
-          <Showreel />
-          <Work />
+          {/* <Showreel /> */}
           <Services />
+          <Work />
           <About />
           <CTA />
           <Footer />

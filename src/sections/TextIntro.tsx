@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 export const TextIntro = () => {
-  const text = "In a world full of noise, movement, and constant competition, we help brands find clarity. From strategy to design, we create digital experiences that stand out, connect with people, and drive real growth.";
+  const text = "We help brands find clarity in a world filled with noise, constant movement, and endless competition. From strategy to design, we craft digital experiences that stand out, connect with people, and drive meaningful growth..";
 
   const words = text.split(' ');
 

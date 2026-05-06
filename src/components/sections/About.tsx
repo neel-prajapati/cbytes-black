@@ -75,7 +75,7 @@ export const About = () => {
             {/* CTA */}
             <motion.div variants={fadeUpVariants} custom={4} className="pt-8">
               <motion.a
-                href="mailto:hi@cruisingbytes.black"
+                href="mailto:hi@cruisingbytes.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-lg font-semibold transition-all duration-300"

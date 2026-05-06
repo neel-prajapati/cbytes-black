@@ -50,11 +50,11 @@ export const Footer = () => {
           </div>
 
           <motion.a
-            href="mailto:hi@cruisingbytes.black"
+            href="mailto:hi@cruisingbytes.com"
             whileHover={{ color: '#ffffff' }}
             className="text-text-muted/50 hover:text-text-muted text-sm transition-colors"
           >
-            hi@cruisingbytes.black
+            hi@cruisingbytes.com
           </motion.a>
 
           <p className="text-text-muted/50 text-sm">{currentYear} ©Copyright</p>
