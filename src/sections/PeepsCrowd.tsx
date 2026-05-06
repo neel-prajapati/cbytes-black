@@ -274,11 +274,11 @@ export const PeepsCrowd = () => {
   };
 
   return (
-    <section className="relative w-full h-screen bg-black overflow-hidden flex flex-col items-center justify-center">
+    <section className="relative w-full bg-black overflow-hidden">
       <canvas
         ref={canvasRef}
         id="canvas"
-        className="absolute inset-0 w-full h-full"
+        className="w-full block h-80 sm:h-96 md:h-[450px] lg:h-[500px]"
       />
     </section>
   );

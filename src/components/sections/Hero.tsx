@@ -14,6 +14,13 @@ export const Hero = () => {
     { label: '10+', value: 'Years of Experience' },
   ];
 
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.scrollY + window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="relative w-full min-h-screen bg-black overflow-hidden pt-32 pb-20">
       {/* Animated Background Circles */}
@@ -84,7 +91,7 @@ export const Hero = () => {
               className="flex items-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300"
             >
               <Play size={20} className="fill-current" />
-              Watch Showreel
+              Watch Showreelsdfsd
             </motion.button>
 
             <motion.button
@@ -101,7 +108,8 @@ export const Hero = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-muted/50"
+          onClick={handleScrollDown}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-text-muted/50 cursor-pointer hover:text-text-muted/80 transition-colors"
         >
           <svg
             className="w-6 h-6"

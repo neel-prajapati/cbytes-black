@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Loader } from './components/Loader';
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
+import { TextIntro } from './sections/TextIntro';
 import { PeepsCrowd } from './sections/PeepsCrowd';
 import { Showreel } from './sections/Showreel';
 import { Work } from './sections/Work';
@@ -24,6 +25,7 @@ function App() {
         <>
           <Navbar />
           <Hero />
+          <TextIntro />
           <PeepsCrowd />
           <Showreel />
           <Work />
