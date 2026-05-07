@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useRef, useState } from 'react';
 
 const PROJECTS = [
   { id: 1, title: 'Project Alpha', category: 'Branding' },
@@ -12,36 +10,6 @@ const PROJECTS = [
 ];
 
 export const Work = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const scroll = (direction: 'left' | 'right') => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    const scrollAmount = 400;
-    const newScrollLeft =
-      container.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
-
-    container.scrollTo({
-      left: newScrollLeft,
-      behavior: 'smooth',
-    });
-
-    setTimeout(() => updateScrollState(), 300);
-  };
-
-  const updateScrollState = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    setCanScrollLeft(container.scrollLeft > 0);
-    setCanScrollRight(
-      container.scrollLeft < container.scrollWidth - container.clientWidth - 10
-    );
-  };
-
   return (
     <section id="work" className="relative w-full bg-black py-32 md:py-40 lg:py-48">
       <div className=" mx-auto px-6 md:px-8 lg:px-10">
@@ -59,60 +27,31 @@ export const Work = () => {
           <p className="text-text-muted/60 text-lg md:text-xl">Our Projects</p>
         </motion.div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          {/* Navigation Arrows */}
-          <motion.button
-            onClick={() => scroll('left')}
-            disabled={!canScrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border border-white/20 text-text-muted/60 hover:text-text-muted hover:border-white/60 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ChevronLeft size={24} />
-          </motion.button>
-
-          {/* Scroll Container */}
-          <div
-            ref={scrollContainerRef}
-            onScroll={updateScrollState}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 px-12"
-            style={{ scrollBehavior: 'smooth' }}
-          >
-            {PROJECTS.map((project) => (
+        {/* Cards Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          {PROJECTS.map((project) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="w-full aspect-square rounded-lg bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-4 sm:p-6 md:p-8 flex flex-col justify-between cursor-pointer group overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <p className="text-text-muted/50 text-xs sm:text-sm md:text-base mb-2 sm:mb-4">{project.category}</p>
+                <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-light text-text-muted">{project.title}</h3>
+              </div>
               <motion.div
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ y: -8 }}
-                className="flex-shrink-0 w-96 h-96 rounded-lg bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-6 flex flex-col justify-between cursor-pointer group overflow-hidden"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                className="relative z-10 text-text-muted/60 text-xs sm:text-sm md:text-base"
               >
-                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative z-10">
-                  <p className="text-text-muted/50 text-sm mb-4">{project.category}</p>
-                  <h3 className="text-2xl font-light text-text-muted">{project.title}</h3>
-                </div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  className="relative z-10 text-text-muted/60 text-sm"
-                >
-                  View Project →
-                </motion.div>
+                View Project →
               </motion.div>
-            ))}
-          </div>
-
-          <motion.button
-            onClick={() => scroll('right')}
-            disabled={!canScrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full border border-white/20 text-text-muted/60 hover:text-text-muted hover:border-white/60 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ChevronRight size={24} />
-          </motion.button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
