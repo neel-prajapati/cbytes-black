@@ -80,7 +80,7 @@ export const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: false, margin: '0px 0px -100px 0px' }}
-          className="mt-20 text-center max-w-3xl mx-auto"
+          className="mt-20 text-center mx-auto"
         >
           <p className="text-xl md:text-2xl font-light text-text-muted/80 leading-relaxed">
             We pride ourselves on our ability to craft digital products that not only meet but exceed the expectations of our clients.

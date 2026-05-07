@@ -22,13 +22,13 @@ export const Work = () => {
           className="mb-20 md:mb-28 text-center"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-text-muted mb-6 md:mb-8">
-            Best Cases
+            The Showcase
           </h2>
-          <p className="text-text-muted/60 text-lg md:text-xl">Our Projects</p>
+          {/* <p className="text-text-muted/60 text-lg md:text-xl">Our Projects</p> */}
         </motion.div>
 
         {/* Cards Grid Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10" style={{marginTop:'2rem', padding:'2rem'}}>
           {PROJECTS.map((project) => (
             <motion.div
               key={project.id}

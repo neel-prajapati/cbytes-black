@@ -10,7 +10,7 @@ import { Work } from './sections/Work';
 import { Services } from './sections/Services';
 import { About } from './sections/About';
 import { CTA } from './sections/CTA';
-import { Footer } from './components/Footer';
+// import { Footer } from './components/Footer';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,7 +32,7 @@ function App() {
           <Work />
           <About />
           <CTA />
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </div>

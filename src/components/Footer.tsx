@@ -15,11 +15,11 @@ export const Footer = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-center mb-12 gap-8"
+          className="flex flex-col items-center justify-center mb-12 gap-0"
         >
-          <p className="text-text-muted/50 text-sm">© {currentYear} Cruising Bytes</p>
+          {/* <p className="text-text-muted/50 text-sm ">Cruising Bytes EST. 2022</p> */}
 
-          <p className="text-text-muted/50 text-sm">EST. 2016</p>
+          {/* <p className="text-text-muted/50 text-sm"></p> */}
 
           <motion.button
             onClick={scrollToTop}
@@ -45,17 +45,17 @@ export const Footer = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col items-center justify-center gap-8 text-center"
         >
-          <div className="flex items-center gap-4">
-            <h3 className="text-lg font-bold text-text-muted">CRUISING BYTES</h3>
+          <div className="flex items-center gap-0">
+            <h3 className="text-lg font-bold text-text-muted stylish-font"></h3>
           </div>
 
-          <motion.a
+          {/* <motion.a
             href="mailto:hi@cruisingbytes.com"
             whileHover={{ color: '#ffffff' }}
             className="text-text-muted/50 hover:text-text-muted text-sm transition-colors"
           >
             hi@cruisingbytes.com
-          </motion.a>
+          </motion.a> */}
 
           <p className="text-text-muted/50 text-sm">{currentYear} ©Copyright</p>
         </motion.div>

@@ -7,7 +7,7 @@ export const About = () => {
 
   const features = [
     { title: 'Expert Team', desc: 'Small group of dedicated professionals' },
-    { title: 'Years of Experience', desc: 'Since 2016, delivering excellence' },
+    { title: 'Years of Experience', desc: 'Since 2022, delivering excellence' },
     { title: 'Global Clients', desc: 'Trusted by brands worldwide' },
   ];
 
@@ -47,7 +47,7 @@ export const About = () => {
               custom={1}
               className="text-text-muted/70 text-lg leading-relaxed max-w-xl"
             >
-              We are a small group of experts in design, branding, and digital strategy. Since our founding in 2016, we've been dedicated to creating premium digital experiences that drive real results for our clients.
+              We are a small group of experts in design, branding, and digital strategy. Since our founding in 2022, we've been dedicated to creating premium digital experiences that drive real results for our clients.
             </motion.p>
 
             <motion.p
@@ -120,7 +120,7 @@ export const About = () => {
             {/* Stats cards */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { number: '2016', label: 'Founded' },
+                { number: '2022', label: 'Founded' },
                 { number: '50+', label: 'Projects' },
               ].map((stat, i) => (
                 <motion.div
