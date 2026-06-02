@@ -62,8 +62,8 @@ export const CTA = () => {
             </div>
 
             <p className="text-text-muted/60 text-xl mt-8 stylish-font" style={{marginTop:'2rem'}}>
-              Cruising Bytes© {currentYear}. All rights reserved.
-            </p>
+              Cruising Bytes© 
+            </p>{currentYear}. All rights reserved.
           </div>
         </motion.div>
       </div>
